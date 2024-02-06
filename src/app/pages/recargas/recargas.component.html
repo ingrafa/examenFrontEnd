@@ -1,0 +1,21 @@
+<!-- src/app/recarga/recarga.component.html -->
+<div>
+  <h2>Formulario de Recarga</h2>
+  <form (submit)="realizarRecarga()">
+      <label for="numeroTelefono">Número de Teléfono:</label>
+      <input type="text" id="numeroTelefono" [(ngModel)]="recarga.numeroTelefono" required>
+
+      <label for="operador">Operador:</label>
+      <input type="text" id="operador" [(ngModel)]="recarga.operador" required>
+
+      <label for="monto">Monto:</label>
+      <input type="number" id="monto" [(ngModel)]="recarga.monto" required>
+
+      <button type="submit">Realizar Recarga</button>
+  </form>
+
+  <div *ngIf="mensaje">
+      {{ mensaje }}
+  </div>
+</div>
+
